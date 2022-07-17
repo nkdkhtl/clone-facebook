@@ -1,0 +1,61 @@
+:root {
+    --dark-mode-color: #242526;
+    --white-color: #fff;
+    --secondary-text-color:#b0b3b8
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+/* Navigation items */
+.nav-item  {
+    display: flex;
+    align-items: center;
+    height: 4.4rem;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background-color:rgb(50 50 50);
+}
+
+.nav-item > img {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-left: 2px;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.nav-item > .btn--see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2.8rem;
+    height:2.8rem;
+    color: rgb(228 230 235);
+    border-radius: 50%;
+    background-color: rgb(47 48 49);
+}
+.nav-item > img:first-child {
+    border-radius: 50%;
+}
+
+.nav-item > span {
+    padding-left: 8px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: inherit;
+}

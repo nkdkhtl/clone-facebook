@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    height: inherit;
+}
+
+
+/* Navigation tabs */
+.nav-tabs {
+    display: block;
+    background-color: var(--dark-mode-color);
+    width: 31.6rem;
+    height: 100%;
+    margin-top: 5.6rem;
+}
+
+.nav-list {
+    border-bottom: 1px solid rgb(62 64 66);
+}
+
+.shortcuts > span {
+    display: block;
+    font-size: 1.7rem;
+    color: var(--secondary-text-color);
+    font-family: inherit;
+    font-weight: 500;
+    padding: 2rem 0 0.8rem 0;
+}
+
+.nav-footer {
+    padding: 1.6rem;
+}
+
+.nav-footer > a,span {
+    font-size: 1.3rem;
+    color:var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.nav-footer > a:hover {
+    text-decoration: underline ;
+}
+
