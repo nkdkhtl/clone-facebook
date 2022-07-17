@@ -20,7 +20,7 @@ html {
 .nav-item  {
     display: flex;
     align-items: center;
-    height: 4.4rem;
+    min-height: 4.4rem;
     padding: 8px;
     border-radius: 12px;
     cursor: pointer;
@@ -30,27 +30,30 @@ html {
     background-color:rgb(50 50 50);
 }
 
-.nav-item > img {
+ .nav-item > img {
     font-size: 1.2rem;
     font-weight: normal;
     margin-left: 2px;
-    width: 2.8rem;
-    height: 2.8rem;
+    min-width: 2.8rem;
+    min-height: 2.8rem;
+    max-width: 3.6rem;
+    max-height: 3.6rem;
+    border-radius:50%
 }
 
 .nav-item > .btn--see-more {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:2.8rem;
-    height:2.8rem;
+    min-width: 2.8rem;
+    min-height: 2.8rem;
+    max-width: 3.6rem;
+    max-height: 3.6rem;
     color: rgb(228 230 235);
     border-radius: 50%;
     background-color: rgb(47 48 49);
 }
-.nav-item > img:first-child {
-    border-radius: 50%;
-}
+
 
 .nav-item > span {
     padding-left: 8px;

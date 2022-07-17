@@ -9,12 +9,18 @@ body {
     display: block;
     background-color: var(--dark-mode-color);
     width: 31.6rem;
-    height: 100%;
-    margin-top: 5.6rem;
+    height: 100vh;
+    padding-top: 4.2rem;
+    margin-top: 1.4rem;
 }
 
 .nav-list {
     border-bottom: 1px solid rgb(62 64 66);
+    padding-bottom: 0.8rem;
+}
+
+.shortcuts > .nav-item > img {
+    border-radius: 1rem;
 }
 
 .shortcuts > span {
@@ -37,6 +43,7 @@ body {
 }
 
 .nav-footer > a:hover {
-    text-decoration: underline ;
+    text-decoration: underline;
 }
+
 
