@@ -10,34 +10,85 @@ body {
     background-color: var(--dark-mode-color);
     width: 31.6rem;
     height: 100vh;
-    padding-top: 4.2rem;
-    margin-top: 1.4rem;
+    padding-top: 5.6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
+
 
 .nav-list {
     border-bottom: 1px solid rgb(62 64 66);
     padding-bottom: 0.8rem;
 }
 
+.nav-item > .btn--see-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.6rem;
+    width: 3.6rem;
+    color: rgb(228 230 235);
+    border-radius: 50%;
+    background-color: rgb(47 48 49);
+}
+
+
+.nav-item > span {
+    padding-left: 8px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+
+/* Shortcuts */
+
 .shortcuts > .nav-item > img {
     border-radius: 1rem;
 }
 
-.shortcuts > span {
-    display: block;
-    font-size: 1.7rem;
-    color: var(--secondary-text-color);
-    font-family: inherit;
-    font-weight: 500;
-    padding: 2rem 0 0.8rem 0;
+.shortcuts:hover .shortcuts-edit {
+    visibility: visible;
 }
 
+.shortcuts-heading {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 8px 8px;
+}
+
+.shortcuts-title {
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    font-size: 1.7rem;
+    font-family: inherit;
+
+}
+
+.shortcuts-edit {
+    visibility: hidden;
+    padding: 7px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #4599ff;
+    border-radius: 5px;
+}
+
+.shortcuts-edit:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+
+
+/* Navigation footer */
 .nav-footer {
     padding: 1.6rem;
 }
 
 .nav-footer > a,span {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color:var(--secondary-text-color);
     text-decoration: none;
 }
@@ -46,4 +97,45 @@ body {
     text-decoration: underline;
 }
 
+.footer-more {
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.footer-more::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(28, 30, 33);
+    width: 17px;
+    height: 17px;
+    bottom:30px;
+    left:10px;
+    transform: rotate(45deg);
+    display: none;
+}
+.footer-more--menu {
+    position: absolute;
+    width:  344px;
+    background-color: rgb(28, 30, 33);;
+    bottom: 67px;
+    left: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.footer-more--menu--item {
+    height: 2rem;
+    list-style: none;
+    padding: 8px 12px;
+    margin: 2px;
+    
+}
+.footer-more--menu--item > a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-family: var(--font-family-1);
+}
 
