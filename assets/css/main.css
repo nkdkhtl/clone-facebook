@@ -3,26 +3,14 @@ body {
     height: inherit;
 }
 
+.wrapper {
+    display: flex;
+
+}
 
 /* Navigation tabs */
-.nav-tabs {
-    display: block;
-    background-color: var(--dark-mode-color);
-    width: 31.6rem;
-    height: 100vh;
-    padding-top: 5.6rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
 
-
-
-.nav-list {
-    border-bottom: 1px solid rgb(62 64 66);
-    padding-bottom: 0.8rem;
-}
-
-.nav-item > .btn--see-more {
+.item > .btn--see-more {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,18 +21,7 @@ body {
     background-color: rgb(47 48 49);
 }
 
-
-.nav-item > span {
-    padding-left: 8px;
-    color: var(--white-color);
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: inherit;
-}
-
-
 /* Shortcuts */
-
 .shortcuts > .nav-item > img {
     border-radius: 1rem;
 }
@@ -53,19 +30,8 @@ body {
     visibility: visible;
 }
 
-.shortcuts-heading {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0 8px 8px;
-}
-
-.shortcuts-title {
-    font-weight: 500;
-    color: var(--secondary-text-color);
-    font-size: 1.7rem;
-    font-family: inherit;
-
+.shortcuts-list {
+    border-bottom: none;
 }
 
 .shortcuts-edit {
@@ -75,12 +41,16 @@ body {
     text-decoration: none;
     color: #4599ff;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .shortcuts-edit:hover {
     background-color: rgb(221 217 251 / 10%);
 }
 
+.shortcuts-item > img {
+    border-radius: 5px;
+}
 
 /* Navigation footer */
 .nav-footer {
@@ -102,8 +72,6 @@ body {
     position: relative;
 }
 
-
-
 .footer-more::before {
     content: "";
     position: absolute;
@@ -115,6 +83,7 @@ body {
     transform: rotate(45deg);
     display: none;
 }
+
 .footer-more--menu {
     position: absolute;
     width:  344px;
@@ -132,6 +101,7 @@ body {
     margin: 2px;
     
 }
+
 .footer-more--menu--item > a {
     text-decoration: none;
     color: var(--white-color);
@@ -139,3 +109,95 @@ body {
     font-family: var(--font-family-1);
 }
 
+
+/* News Feed */ 
+.news-feed {
+    width: calc(100% - 2*var(--tabs-width));
+    
+}
+
+/* sponsored */
+
+.sponsored-item {
+    position: relative;
+}
+
+.sponsored-item__options {
+    position: absolute;
+    right:0;
+    top:5px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.sponsored-item__options:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+
+.sponsored-img {
+    background-color: #4599ff;
+    border-radius: 10px;
+    width: 115.19px;
+    height: 62px
+}
+
+.sponsored-item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px;
+}
+.sponsored-item__name {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 0;
+}
+
+
+/* Social tabs */
+
+/* Contacts Tab */
+
+.contacts-tools {
+    display:flex;
+}
+
+.contacts-search,.contacts-room,.contacts-option {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.contacts-search:hover,.contacts-room:hover,.contacts-option:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+
+/* Group conversations */
+.group-conversation--creating > .img {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: rgb(47 48 49);
+    border-radius: 50%;
+    margin-left: 3px;
+}
+/* New message */
+.new-message {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 5px;
+    bottom: 0;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgb(75 76 79);
+    margin-right: 12px;
+    margin-bottom: 12px;
+}

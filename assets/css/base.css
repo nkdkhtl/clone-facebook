@@ -3,6 +3,7 @@
     --white-color: #fff;
     --secondary-text-color:#b0b3b8;
     --font-family-1:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    --tabs-width: 31.6rem;
 }
 
 * {
@@ -26,42 +27,67 @@ html {
 }
 
 /* Srollbar */
-.nav-tabs::-webkit-scrollbar {
+.scrollbar-tab::-webkit-scrollbar {
     width: 1.6rem;
-    display: none;
-}
-
-.nav-tabs:hover::-webkit-scrollbar {
-    display: block;
+    visibility: hidden;
     
 }
-.nav-tabs::-webkit-scrollbar-track {
+
+.scrollbar-tab:hover::-webkit-scrollbar,.scrollbar-tab:hover::-webkit-scrollbar-thumb {
+    visibility: visible;    
+}
+.scrollbar-tab::-webkit-scrollbar-track {
         background-color: rgba(164, 164, 164, 0.1);
 }
 
-.nav-tabs::-webkit-scrollbar-thumb {
+.scrollbar-tab::-webkit-scrollbar-thumb {
+    visibility: hidden;
     display: block;
     background-color: grey;
     height: 90%;
     background-clip: content-box;
     border: 4px solid transparent;
     border-radius: 10px;
-
 }
-.nav-tabs::-webkit-scrollbar-thumb:hover {
+.scrollbar-tab::-webkit-scrollbar-thumb:hover {
     background-color: #979797;
 }
 
-
-.nav-tabs::-webkit-scrollbar-corner,
-.nav-tabs::-webkit-resizer,
-.nav-tabs::-webkit-scrollbar-button {
+.scrollbar-tab::-webkit-scrollbar-corner,
+.scrollbar-tab::-webkit-resizer,
+.scrollbar-tab::-webkit-scrollbar-button {
     display:none;
 }
 
 
 /* Navigation items */
-.nav-item  {
+.tabs {
+    display: block;
+    background-color: var(--dark-mode-color);
+    width: var(--tabs-width);
+    height: 100vh;
+    padding-top: 5.6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.heading {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 8px 8px;
+}
+.title {
+    font-weight: 500;
+    color: var(--secondary-text-color);
+    font-size: 1.7rem;
+    font-family: inherit;
+}
+.list {
+    border-bottom: 1px solid rgb(62 64 66);
+    padding-bottom: 0.8rem;
+}
+.item  {
     display: flex;
     align-items: center;
     min-height: 4.4rem;
@@ -70,11 +96,11 @@ html {
     cursor: pointer;
 }
 
-.nav-item:hover {
+.item:hover {
     background-color:rgb(50 50 50);
 }
 
- .nav-item > img {
+.item > img {
     font-size: 1.2rem;
     font-weight: normal;
     margin-left: 2px;
@@ -82,6 +108,12 @@ html {
     min-height: 2.8rem;
     max-width: 3.6rem;
     max-height: 3.6rem;
-    border-radius:50%
+    border-radius:50%;
 }
-
+.item > span {
+    padding-left: 8px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: inherit;
+}
