@@ -1,5 +1,6 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
+const  moreFooter = $('.footer-more')
 
 //Xu li su khien click More
 document.onclick = function(e) {
@@ -29,5 +30,19 @@ document.onclick = function(e) {
                 navBtn.classList.replace('active','inactive')
             }
         }    
+        // More button 
+        
     })
+
+    if(e.target == moreFooter) {
+        if(moreFooter.parentElement.querySelector('.hidden')) {
+            moreFooter.parentElement.querySelector('.hidden').classList.replace('hidden', 'visible')
+        } else {
+            moreFooter.parentElement.querySelector('.visible').classList.replace( 'visible','hidden')
+        }
+    } else {
+        moreFooter.parentElement.querySelector('.visible').classList.replace( 'visible','hidden')
+    }
 }
+
+

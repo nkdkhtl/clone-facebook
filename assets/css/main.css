@@ -8,6 +8,9 @@ body {
 
 }
 
+
+
+
 /* Navigation tabs */
 
 .nav-tabs {
@@ -86,27 +89,26 @@ body {
 
 .footer-more {
     cursor: pointer;
-    position: relative;
 }
 
-.footer-more::before {
+.footer-more-triangle {
+    z-index:1;
     content: "";
     position: absolute;
-    background-color: rgb(28, 30, 33);
+    background-color: var(--newsfeed-pattern-color);
     width: 17px;
     height: 17px;
-    bottom:30px;
-    left:10px;
+    bottom: -8px;
+    left: 74px;
     transform: rotate(45deg);
-    display: none;
 }
 
 .footer-more--menu {
-    display:none;
+    z-index: 2;
     position: absolute;
     width:  344px;
-    background-color: rgb(28, 30, 33);
-    bottom: 67px;
+    background-color: var(--newsfeed-pattern-color);
+    bottom: -200px;
     left: 10px;
     border-radius: 10px;
     padding: 5px;
