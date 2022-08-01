@@ -1,5 +1,6 @@
 :root {
-    --dark-mode-color: #18191a;
+    --dark-mode-color: rgb(24, 25, 26);
+    --newsfeed-pattern-color:rgb(36, 37, 38);
     --white-color: #fff;
     --secondary-text-color:rgb(176, 179, 184);
     --font-family-1:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
@@ -21,15 +22,14 @@ html {
     font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-
-
-.active {
+.active, .visible {
     display: block;
 }
 
-.inactive {
-    display: none;
+.inactive,.hidden {
+    display: none !important;
 }
+
 
 
 .scrollbar-tab::-webkit-scrollbar {

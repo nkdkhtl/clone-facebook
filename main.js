@@ -1,15 +1,33 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-const moreBtn = $('.footer-more')
-const moreMenu = $('.footer-more--menu')
 
 //Xu li su khien click More
 document.onclick = function(e) {
-    if(e.target === moreBtn) {
-        moreMenu.classList.replace('inactive', 'active')
-    } else {
-        moreMenu.classList.replace('active', 'inactive')
-    }
-} 
+    const navBtn = e.target
+    Array.from(navBtn.classList).find(function(className) {
+        if (className === 'active') {
+            const hiddenTabs = navBtn.parentElement.querySelectorAll(`.hidden`)
+            const visibleTabs = e.target.parentElement.querySelectorAll(`.visible`)
 
+            // See more
+            if (hiddenTabs) {
+                Array.from(hiddenTabs).forEach(function(hiddenTab) {
+                    hiddenTab.classList.replace('hidden', 'visible')
+                })    
+            }
 
+            // See less
+            if(visibleTabs) {
+                Array.from(visibleTabs).forEach(function(visibleTab) {
+                    visibleTab.classList.replace( 'visible','hidden')
+                })
+            }
+
+            // Thay doi button 
+            if(navBtn.parentElement.querySelector('.inactive')) {
+                navBtn.parentElement.querySelector('.inactive').classList.replace('inactive','active')
+                navBtn.classList.replace('active','inactive')
+            }
+        }    
+    })
+}
