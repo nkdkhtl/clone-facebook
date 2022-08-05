@@ -1,8 +1,10 @@
 :root {
     --dark-mode-color: rgb(24, 25, 26);
+    --light-mode-color: #f8f8f8;
     --newsfeed-pattern-color:rgb(36, 37, 38);
     --white-color: #fff;
     --secondary-text-color:rgb(176, 179, 184);
+    --primary-text-color: rgb(228, 230, 235);
     --font-family-1:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
     --tabs-width: 31.6rem;
     --min-stories-height:19.8375rem;
