@@ -1,5 +1,6 @@
 :root {
     --dark-mode-color: rgb(24, 25, 26);
+    --dark-mode-color-2: rgb(28 30 33);
     --light-mode-color: #f8f8f8;
     --newsfeed-pattern-color:rgb(36, 37, 38);
     --white-color: #fff;
@@ -9,6 +10,7 @@
     --tabs-width: 31.6rem;
     --min-stories-height:19.8375rem;
     --max-stories-height:23.0375rem;
+    --dark-mode-hover: rgb(50 51 52);
 }
 
 * {
@@ -199,7 +201,7 @@ html {
 }
 
 .item:hover {
-    background-color:rgb(50 50 50);
+    background-color:var(--dark-mode-hover);
 }
 
 .item > img {
@@ -218,6 +220,110 @@ html {
     font-size: 1.5rem;
     font-weight: 500;
     font-family: inherit;
+}
+
+/* Footer */
+/* Navigation footer */
+.footer {
+    padding: 1.6rem;
+}
+
+.footer > a,span {
+    font-size: 1.4rem;
+    color:var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.footer > a:hover {
+    text-decoration: underline;
+}
+
+.footer-more {
+    cursor: pointer;
+}
+
+
+.footer-more--menu {
+    z-index: 3;
+    position: absolute;
+    width:  344px;
+    background-color: var(--newsfeed-pattern-color);
+    border-radius: 10px;
+    padding: 5px;
+    margin-top:-250px;
+    margin-left: -10px;
+}
+
+.footer-more-triangle {
+    z-index:1;
+    content: "";
+    position: absolute;
+    background-color: var(--newsfeed-pattern-color);
+    width: 17px;    
+    height: 17px;
+    bottom: -8px;
+    left: 74px;
+    transform: rotate(45deg);
+}
+
+
+.footer-more--menu--item {
+    height: 2rem;
+    list-style: none;
+    padding: 8px 12px;
+    margin: 2px;
+    
+}
+
+.footer-more--menu--item > a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-family: var(--font-family-1);
+}
+
+
+/* Input */
+.fill {
+    width: 100%;
+    height: 4rem;
+    padding-left: 30px;
+    background: #3A3B3C;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    color: #8A8D91;
+}
+    
+    
+.fill:focus  {
+    outline: none;
+    padding-left: 15px;
+}
+.fill:focus ~ .search__logo {
+    display: none;
+}
+    
+.fill::placeholder {
+    color: #8A8D91;
+    
+}
+/* Navbar menu */
+
+.detail {
+    text-align: left;
+    padding: 8px 0;
+}
+
+.detail > h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.detail > span {
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 /* Animation */
