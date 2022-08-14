@@ -53,8 +53,8 @@ fill: rgb(255, 255, 255);
 .search__logo {
     display: block;
     position: absolute;
-    bottom: 12px;
-    left: 12px;
+    bottom: 13px;
+    left: 14px;
 }
 
 
@@ -79,7 +79,7 @@ fill: rgb(255, 255, 255);
 }
 
 
-.navbar-navigator.staying > .navigator_icon {
+.staying > .navigator_icon {
     fill:#2374E1;
     
 }
@@ -181,7 +181,7 @@ fill: rgb(255, 255, 255);
 
 .navbar__menu-tab-list {
     width: 33.8rem;
-    height: max-content;
+    height: fit-content;
 }
 
 .navbar__menu-search {
@@ -195,32 +195,27 @@ fill: rgb(255, 255, 255);
     left: 26px;
 }
 
-.navbar__menu-catalog {
-    
-}
-
-.social-heading {
-    padding-top: 0;
-}
-
-
-
 .navbar__menu-catalog .title {
     color: var(--white-color);
     font-size: 1.7rem;
     font-weight: 600;
 }
 
-.navbar__menu-catalog 
-
-.social-list,.social-item,.navbar-create-item {
+.navbar__menu-catalog .list {
     padding: 0 8px;
+}
+
+.social-heading {
+    padding-top: 0;
 }
 
 .social-item > img,.entertainment-item > img,.shopping-item > img,.personal-item > img,
 .professional-item > img,.community-resouce-item > img,.more-from-meta-item > img {
     margin: 0 12px 8px 0;
-        
+    min-width: initial;
+    min-height: initial; 
+    max-width: none;
+    max-height:none;
 }
 
 .navbar__menu-tab-create {
@@ -245,6 +240,229 @@ fill: rgb(255, 255, 255);
     justify-content: center;
     border-radius: 50%;
     background-color: var(--dark-mode-hover);
+    margin: 0 12px 0 8px;
+}
+
+/* Messenger tab */
+.navbar__messenger {
+    position: relative;
+}
+.navbar__messenger-tab-wrapper {
+    position: absolute;
+    top: 50px;
+    right: -90px;
+    width: 34.5rem;
+    height : calc(900px - 15%);
+    background-color: var(--newsfeed-pattern-color);
+    padding: 0;
+}
+.navbar__messenger-heading {
+    padding: 12px 16px 4px;
+}
+.navbar__messenger-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+}
+
+.navbar__messenger-tools {
+    display:flex;
+}
+.navbar__messenger-options,.navbar__messenger-see-all,.navbar__messenger-new-mess,.navbar__messenger-room {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.navbar__messenger-option:hover,.navbar__messenger-see-all:hover,.navbar__messenger-new-mess:hover,.navbar__messenger-room:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+
+.navbar__messenger-search {
+    width: 100%;
+    padding:0 16px;
+}
+.navbar__messenger-search__logo.search__logo {
+    bottom: 8px;
+    left: 24px;
+}
+
+.navbar__messenger-conversation-list {
+    padding-top: 8px;
+}
+
+.messenger-item {
+    padding: 8px;
+    position: relative;
+}
+.messenger-item:hover > .messenger-item__options {
+    display: block;
+}
+
+.messenger-item  > img {
+    min-width: 0;
+    min-height: 0;
+    max-width: 5.6rem;
+    max-height: 5.6rem;
+}
+
+.messenger-chat-detail {
+    padding-left: 8px;
+}
+
+.messenger-item__options {
+    display: none;
+    position: absolute;
+    right: 30px;
+    padding: 10px;
+    border-radius: 50%;
+}   
+.messenger-item__options:hover {
+    background-color: rgb(221 217 251 / 10%)
+}
+
+.navbar__messenger-footer {
+    position: fixed;
+    bottom: 44px;
+    right: 12px;
+    background-color: var(--newsfeed-pattern-color);
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    cursor: default;
+}
+
+
+.navbar__messenger-footer > a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(69, 153, 255);
+    text-decoration: none;
+    
+}
+
+/* Notifications tab */
+.navbar__notifications {
+    position: relative;
+}
+
+.navbar__notifications-tab-wrapper {
+    position: absolute;
+    right: -42px;
+    top: 50px;
+    width: 34.5rem;
+    padding: 0;
+    background-color: var(--newsfeed-pattern-color);
+    border-radius: 10px;
+}
+
+.navbar__notifications-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 16px 12px;
+}
+
+.navbar__notifications-header > h2 {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.navbar__notifications-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+.navbar__notifications-options:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+.navbar__notifications-selection {
+    padding-left: 16px;
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.navbar__notifications-selection > .staying {
+    color: #2d88ff;
+    background-color: #263951;
+}
+.notifications-all,.notifications-unread {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    color: var(--primary-text-color);
+    border-radius: 10px;
+    margin: 0 5px;
+}
+.notifications-all:hover,.notifications-unread:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+.notifications-heading {
+    padding: 16px 16px 0;
+}
+.notifications-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+.notifications-see-all {
+    padding: 7px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #4599ff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.notifications-see-all:hover {
+    background-color: rgb(221 217 251 / 10%);
+}
+
+.notification-item {
+    padding: 8px;
+    position: relative;
+}
+
+.notification-detail {
+    padding-left: 8px;
+    width: 70%;
+}
+.notification-detail > h2 {
+    margin: 0;
+}
+
+.notification-item:hover > .notification-item__options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-item  > img {
+    min-width: 0;
+    min-height: 0;
+    max-width: 5.6rem;
+    max-height: 5.6rem;
+}
+.notification-item__options {
+    display: none;
+    position: absolute;
+    right: 30px;
+    padding: 10px;
+    border-radius: 50%;
+}   
+.notification-item__options:hover {
+    background-color: rgb(221 217 251 / 10%)
 }
 /* Profile tab */
 .navbar_right_profile {
