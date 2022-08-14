@@ -1,11 +1,10 @@
 body {
-margin: 0;
-height: inherit;
+    margin: 0;
+    height: inherit;
 }
 
 .wrapper {
-display: flex;
-
+    display: flex;
 }
 
 
@@ -593,8 +592,9 @@ fill: rgb(255, 255, 255);
 /* Navigation tabs */
 
 .nav-tabs {
-    position: fixed;
-
+    width: var(--nav-tab-width);
+    position: sticky;
+    top: 0;
 }
 
 
@@ -714,10 +714,9 @@ fill: rgb(255, 255, 255);
 
 /* Newsfeed */ 
 .newsfeed-tabs {
-    width: calc(100% - 2*var(--tabs-width)); 
+    width: calc(100% - (var(--nav-tab-width) + var(--social-tab-width)));
     background-color: var(--dark-mode-color);    
     padding: 56px 40px 0;   
-    margin: 0 var(--tabs-width);
     
 }
 
@@ -1053,9 +1052,9 @@ fill: rgb(255, 255, 255);
 
 /* Social tabs */
 .social-tabs {
-    z-index: 3; 
-    position: fixed;
-    right: 0;
+    width: var(--social-tab-width);
+    position: sticky;
+    top: 0;
 }
 
 /* sponsored */

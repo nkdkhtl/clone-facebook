@@ -1,0 +1,6 @@
+/* Laptop 1024px or Tablet */
+@media (max-width:1025px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+}
