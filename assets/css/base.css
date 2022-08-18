@@ -168,9 +168,8 @@ html {
 .tabs {
     display: block;
     background-color: var(--dark-mode-color);
-    width: var(--tabs-width);
     height: 100vh;
-    padding-top: 5.6rem;
+    padding-top: 6.6rem;
     overflow-y:scroll;
     overflow-x:hidden;
 
