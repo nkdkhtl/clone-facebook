@@ -1,34 +1,119 @@
-/* Laptop 1024px or Tablet */
-@media (max-width: 1024px) {
-
-    .hide-on-mobile-tablet {
+/* For 1440px higher */
+@media (min-width: 1441px) {
+    :root {
+        --post-margin: 14%;
+    }
+    body {
+        background-color: var(--dark-mode-color);
+    }
+    .wrapper {
+        width: 100%;
+        padding: 0 0%;
+    }
+    .newsfeed-tabs {
+        padding-left: 4% ;
+        padding-right: 4%;
+    }
+    .navbar {
+        left: 0;
+    }
+    .navbar__create {
+        display: none;
+    }
+    .stories-bar-item:nth-of-type(4) {
         display: none;
     }
 
-    .newsfeed-tabs {
-        width: 70%;
-        padding:0 10%;
+    
+}
+@media (min-width: 1600px) { 
+    :root {
+        --post-margin: 10%;
     }
-
-    .social-tabs {
-        width: 30%
+    .wrapper {
+        padding: 0 8%;
     }
-
-    .navbar_right {
-        padding-right: 20px;
+    .stories-bar-item:nth-of-type(4) {
+        display:block;
     }
+    
+}
 
-
-    .navbar-navigator {
+@media (min-width: 1920px) { 
+    :root {
+        --post-margin: 4%;
     }
-    .search {
-        width: auto;
+    .wrapper {
+        padding: 0 12%;
     }
+    .stories-bar-item:nth-of-type(4) {
+        display:block;
+    }
+    .stories-bar-item:nth-of-type(5) {
+        display:block;
+    }
+}
 
+@media (min-width: 2200px) { 
+    .wrapper {
+        padding: 0 15%;
+    }
+    .stories-bar-item:nth-of-type(4) {
+        display:block;
+    }
+    .stories-bar-item:nth-of-type(5) {
+        display:block;
+    }
+}
+
+
+@media (min-width: 2350px) { 
+    :root {
+        --post-margin:0;
+    }
+    .wrapper {
+        padding: 0 20%;
+    }
+    .stories-bar-item:nth-of-type(4) {
+        display:block;
+    }
+    .stories-bar-item:nth-of-type(5) {
+        display:block;
+    }
+}
+
+/* Devices with resolution higher than 1024px */
+
+@media (max-width: 1440px) {
+    :root {
+        --post-margin: 14%
+    }
+    .item > img {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    .stories-bar-item:nth-of-type(5) {
+        display: none;
+    }
+    
+    
+}
+
+@media (max-width:1260px) and (min-width:1101px) {
+    :root {
+        --post-margin:8%
+    }
+}
+
+@media (max-width:1260px) {
     .search-blank {
         display: none;
     }
-
+    
+    .search {
+        width: auto;
+    }
+    
     .search__logo {
         position: static;
         display: flex;
@@ -39,39 +124,87 @@
         cursor: pointer;
     }
 }
-/* For 1440px higher */
-@media (min-width: 1441px) {
-    body {
-        background-color: var(--dark-mode-color);
+
+@media (max-width:1100px) {
+    :root {
+        --post-margin: 15%;
+        --newsfeed-tabs-width:70%;
+        --nav-and-social-tabs-width: 30%;
     }
-    .wrapper {
-        width: 100%;
-        padding: 0 0%;
+
+    .nav-tabs {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+    
+}   
+@media (min-width:1100px) {
+    .navbar__create {
+        display: none;
+    }
+}
+
+/* Devices with resolution lower than 900px */
+@media (max-width: 899px) {
+    :root {
+        --post-margin: 20%;
+        --newsfeed-tabs-width:100vw
+    }
+    .social-tabs {
+        display: none;
+    }
+    .stories-bar-item:nth-of-type(4) {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 701px) {
+    :root {
+        --post-margin: 11%;
+    }
+    .navbar_center {
+        display: none;
     }
     .navbar {
-        left: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 425px) {
+    :root {
+        --post-margin:0
+    }
+    .newsfeed-tabs {
+        padding: 56px 0 ;
+    }
+    .stories-bar-item:nth-of-type(5) {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .navbar_right {
+        margin-left:-10px;
+    }
+    .navbar_left {
+        padding: 0;
     }
 }
 
-@media (min-width: 1600px) { 
-    .wrapper {
-        padding: 0 8%;
-    }
-}
 
-@media (min-width: 1920px) { 
-    .wrapper {
-        padding: 0 10%;
-    }
-}
-@media (min-width: 2200px) { 
-    .wrapper {
-        padding: 0 15%;
-    }
-}
-@media (min-width: 2350px) { 
-    .wrapper {
-        padding: 0 20%;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
 

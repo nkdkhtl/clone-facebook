@@ -1,7 +1,11 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 const  moreFooter = $('.footer-more')
-
+const navbarMenu = $('.navbar__menu')
+const navbarMessenger = $('.navbar__messenger')
+const navbarNotifications = $('.navbar__notifications')
+const navbarCreate = $('.navbar__create')
+const navbarProfile = $('.navbar_right_profile>img')
 //Xu li su kien click
 document.onclick = function(e) {
     const navBtn = e.target
@@ -31,13 +35,31 @@ document.onclick = function(e) {
             }
         }    
     })
-    if(e.target == moreFooter) {
-        if(moreFooter.parentElement.querySelector('.hidden')) {
-            moreFooter.parentElement.querySelector('.hidden').classList.replace('hidden', 'visible')
-        } else {
-            moreFooter.parentElement.querySelector('.visible').classList.replace( 'visible','hidden')
-        }
-    } else {
-        moreFooter.parentElement.querySelector('.visible').classList.replace( 'visible','hidden')
+    
+    // Cac button
+    if(e.target === navbarMenu) {
+        navbarMenu.querySelector('.hidden').classList.replace('hidden','visible')
+    } 
+    else if (e.target === navbarCreate) {
+        navbarCreate.querySelector('.hidden').classList.replace('hidden','visible')
+    } 
+    else if (e.target === navbarMessenger) {
+        navbarMessenger.querySelector('.hidden').classList.replace('hidden','visible')
+    } 
+    else if (e.target === navbarNotifications) {
+        navbarNotifications.querySelector('.hidden').classList.replace('hidden','visible')
+    } 
+    else if (e.target === moreFooter) {
+        console.log(e.target)
+        moreFooter.querySelector('.hidden').classList.replace('hidden','visible')
+    } 
+    else if (e.target === navbarProfile) {
+        console.log(e.target)
+        navbarProfile.querySelector('.hidden').classList.replace('hidden','visible')
+    }
+    else {
+        e.target.querySelector('.visible').classList.replace('visible','hidden')
     }
 }
+
+

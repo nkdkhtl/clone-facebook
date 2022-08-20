@@ -7,11 +7,11 @@
     --secondary-text-color:rgb(176, 179, 184);
     --primary-text-color: rgb(228, 230, 235);
     --font-family-1:Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
-    --social-tab-width: 34.05rem;
-    --nav-tab-width: 34.05rem;
-    --min-stories-height:19.8375rem;
-    --max-stories-height:23.0375rem;
+    --post-margin:14%;
     --dark-mode-hover: rgb(50 51 52);
+    --nav-and-social-tabs-width: 24%;
+    --newsfeed-tabs-width: 52%;
+
 }
 
 * {
@@ -21,7 +21,7 @@
 
 html {
     font-size: 62.5%;
-    line-height: 1.6rem;
+    line-height: 2rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
@@ -208,17 +208,15 @@ html {
     font-size: 1.2rem;
     font-weight: normal;
     margin-left: 2px;
-    min-width: 2.8rem;
-    min-height: 2.8rem;
-    max-width: 3.6rem;
-    max-height: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
     border-radius:50%;
 }
 .item > span {
     padding-left: 8px;
-    color: var(--white-color);
+    color: var(--primary-text-color);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: inherit;
 }
 
