@@ -1,17 +1,35 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 const  moreFooter = $('.footer-more')
-const navbarMenu = $('.navbar__menu')
-const navbarMessenger = $('.navbar__messenger')
+const rightNavbar = $('.navbar_right')
+const navTabs = $('.nav-tabs')
 const navbarNotifications = $('.navbar__notifications')
 const navbarCreate = $('.navbar__create')
 const navbarProfile = $('.navbar_right_profile>img')
-//Xu li su kien click
-document.onclick = function(e) {
-    const navBtn = e.target
-    Array.from(navBtn.classList).find(function(className) {
+
+// Finding hidden tabs 
+function getHiddenElement(element) {
+    while (element.parentElement) {
+        if (element.parentElement && element.nextElementSibling) {
+            const childElements = Array.from(element.children)
+            // if (window.getComputedStyle(element.nextElementSibling).display === 'none') {
+            //     return element.parentElement
+            // }
+            // if (element.parentElement.classList.contains('active')) {
+            //     return element.parentElement.classList.remove('active')
+            // }
+            
+        }
+        element = element.parentElement
+    }
+     
+}
+        
+navTabs.onclick = function(e) {
+    const button = e.target
+    Array.from(button.classList).find(function(className) {
         if (className === 'active') {
-            const hiddenTabs = navBtn.parentElement.querySelectorAll(`.hidden`)
+            const hiddenTabs = button.parentElement.querySelectorAll(`.hidden`)
             const visibleTabs = e.target.parentElement.querySelectorAll(`.visible`)
 
             // See more
@@ -29,37 +47,16 @@ document.onclick = function(e) {
             }
 
             // Thay doi button 
-            if(navBtn.parentElement.querySelector('.inactive')) {
-                navBtn.parentElement.querySelector('.inactive').classList.replace('inactive','active')
-                navBtn.classList.replace('active','inactive')
+            if(button.parentElement.querySelector('.inactive')) {
+                button.parentElement.querySelector('.inactive').classList.replace('inactive','active')
+                button.classList.replace('active','inactive')
             }
         }    
     })
     
-    // Cac button
-    if(e.target === navbarMenu) {
-        navbarMenu.querySelector('.hidden').classList.replace('hidden','visible')
-    } 
-    else if (e.target === navbarCreate) {
-        navbarCreate.querySelector('.hidden').classList.replace('hidden','visible')
-    } 
-    else if (e.target === navbarMessenger) {
-        navbarMessenger.querySelector('.hidden').classList.replace('hidden','visible')
-    } 
-    else if (e.target === navbarNotifications) {
-        navbarNotifications.querySelector('.hidden').classList.replace('hidden','visible')
-    } 
-    else if (e.target === moreFooter) {
-        console.log(e.target)
-        moreFooter.querySelector('.hidden').classList.replace('hidden','visible')
-    } 
-    else if (e.target === navbarProfile) {
-        console.log(e.target)
-        navbarProfile.querySelector('.hidden').classList.replace('hidden','visible')
-    }
-    else {
-        e.target.querySelector('.visible').classList.replace('visible','hidden')
-    }
+    
 }
-
-
+rightNavbar.onclick = function(e) {
+    const button = e.target
+    const hiddenElement  =  getHiddenElement(button)
+}
