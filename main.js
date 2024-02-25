@@ -1,31 +1,39 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-const  moreFooter = $('.footer-more')
+const leftNavbar = $('.navbar_left')
 const rightNavbar = $('.navbar_right')
 const navTabs = $('.nav-tabs')
-const navbarNotifications = $('.navbar__notifications')
-const navbarCreate = $('.navbar__create')
-const navbarProfile = $('.navbar_right_profile>img')
+const close = $('.create-post-tab-close')
+const createPostTab = $('.create-post-tab')
+const inputBar = $('.status-texting')
 
-// Finding hidden tabs 
-function getHiddenElement(element) {
+// Handle button
+function getHiddenElement(element,selector) {
+    // Finding the previous active elements and remove
+    var preActiveElements = selector.getElementsByClassName('active')
+    console.log(preActiveElements)
+    if (preActiveElements) {
+        Array.from(preActiveElements).forEach(function(preActiveElement) {
+            preActiveElement.classList.remove('active')
+        })
+    }
+    //  Finding the display="none" element and adding class active to its parent 
     while (element.parentElement) {
-        if (element.parentElement && element.nextElementSibling) {
-            const childElements = Array.from(element.children)
-            // if (window.getComputedStyle(element.nextElementSibling).display === 'none') {
-            //     return element.parentElement
-            // }
-            // if (element.parentElement.classList.contains('active')) {
-            //     return element.parentElement.classList.remove('active')
-            // }
+        const childElements = Array.from(element.children)
+        if (childElements) {
+            for (let i = 0;i<childElements.length;i++) {    
+                if (window.getComputedStyle(childElements[i]).display === "none") {
+                    childElements[i].parentElement.classList.add('active')
+                }
+            }
             
         }
         element = element.parentElement
     }
-     
-}
+}   
+
         
-navTabs.onclick = function(e) {
+document.onclick = function(e) {
     const button = e.target
     Array.from(button.classList).find(function(className) {
         if (className === 'active') {
@@ -53,10 +61,15 @@ navTabs.onclick = function(e) {
             }
         }    
     })
+    // Button
+    getHiddenElement(button,rightNavbar)
+    getHiddenElement(button,leftNavbar)
     
-    
+    // Hardcoded
+    if (e.target === inputBar ) {
+        createPostTab.classList.remove('hidden')
+    }
+    // if (e.target === ) 
+
 }
-rightNavbar.onclick = function(e) {
-    const button = e.target
-    const hiddenElement  =  getHiddenElement(button)
-}
+

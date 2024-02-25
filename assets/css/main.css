@@ -76,6 +76,8 @@ fill: rgb(255, 255, 255);
     column-gap: 10px;
     cursor: default;
 }
+
+
 .search-blank {
     grid-area: 1/2/2/4;
     width: 100%;
@@ -1501,6 +1503,9 @@ fill: rgb(255, 255, 255);
     z-index: 999;
     background-color: rgba(28, 30, 33, .5);
 }
+
+
+
 .post-tab {
     width: 50rem;
     height: 42.8rem;
